@@ -1,0 +1,109 @@
+Task 1
+
+git clone https://github.com/TamTania/vcs-advanced.git
+cd vcs-advancedcd 
+git branch architecture
+git checkout architecture
+mkdir assets uploads
+echo "<h1>Hey, guys</h1>" >index.html
+git add .
+git commit -m "new folders (assets, uploads) & new html file"
+touch assets/all.js
+touch assets/css.js
+touch uploads/test.txt
+git status
+git add .
+git commit -m "new files in assets (all.js & css.js)"
+git push origin architecture
+touch .gitignore
+echo "/uploads/*" > .gitignore
+git status
+git add .
+git commit -m "added gitignore"
+git push origin architecture
+git checkout master
+git merge architecture
+git branch -d architecture
+git push origin :architecture
+
+
+Task 2
+
+git branch task-2
+touch rb1.txt
+git add .
+git commit -m "added rb1.txt"
+touch rb2.txt
+git add .
+git commit -m "added rb2.txt"
+touch rb3.txt
+git add .
+git commit -m "added rb3.txt"
+git checkout task-2
+git rebase master
+touch test.txt
+git add .
+git commit -m "added test.txt"
+git merge master
+git checkout master
+gir merge task-2
+git push
+git branch -d task-2
+git push origin :task-2
+
+
+Task 3
+
+touch tags.txt
+git add .
+git commit -m "tag task"
+git tag -a v1.0 -m "test"
+git push origin master
+git push origin v1.0
+
+https://github.com/TamTania/vcs-advanced/releases
+
+
+Task 4
+
+git submodule add https://github.com/TamTania/welcome-to-my-first-repo
+git add .
+git commit -m "added submodule welcome-to-my-first-repo"
+git push
+ 
+
+Task 5
+
+git branch gh-pages
+git checkout gh-pages
+echo "<h1>Hello, guys" > index.html
+git add .
+git commit -m "added index.html"
+git push origin gh-pages
+     (https://tamtania.github.io/vcs-advanced/ ----> Hello,guys)
+echo "<h1>Changes</h1>" > index.html
+git add .
+git commit -m "added changes"
+git push origin gh-pages
+     (https://tamtania.github.io/vcs-advanced/ ----> Changes)
+
+
+Task 6
+
+echo "bibibi" > file.txt
+git add .
+git commit -m "added file.txt"
+git branch conflict
+git checkout conflict
+echo "chaaange" > file.txt
+git add .
+git commit -m "changes"
+git checkout master
+git merge conflict
+git merge --abort 
+     Don`t work
+git merge conflict
+     Fixing manualy
+git add .
+git commit -m "fixing conflict"
+git push
