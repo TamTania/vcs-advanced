@@ -1,0 +1,3 @@
+[submodule "welcome-to-my-first-repo"]
+	path = welcome-to-my-first-repo
+	url = https://github.com/TamTania/welcome-to-my-first-repo
