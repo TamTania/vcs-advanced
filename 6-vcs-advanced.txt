@@ -57,6 +57,9 @@ Task 3
 touch tags.txt
 git add .
 git commit -m "tag task"
+touch tags-2.txt
+git add .
+git commit -m "tag task (updated)"
 git tag -a v1.0 -m "test"
 git push origin master
 git push origin v1.0
